@@ -1,12 +1,8 @@
 from fastapi import FastAPI, HTTPException  # web framework
 from pydantic import BaseModel  # data validation
-from groq import Groq  # LLM client
-from dotenv import load_dotenv  # load .env file
 import os
 
 from agents import generate_draft, review_with_retry, GUIDELINES
-
-load_dotenv()  # load GROQ_API_KEY from .env
 
 app = FastAPI(title="Customer Complaint Reply Drafter with Critique Agent")
 

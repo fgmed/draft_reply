@@ -1,10 +1,7 @@
 from groq import Groq  # LLM client
-from dotenv import load_dotenv  # load .env file
 import os
 
-load_dotenv()  # load GROQ_API_KEY from .env
-
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))  # init Groq client
+client = Groq(api_key=os.environ["GROQ_API_KEY"])  # init Groq client
 
 GUIDELINES = """
 1. Acknowledge frustration FIRST, before any explanation
