@@ -22,8 +22,7 @@ A FastAPI service that generates professional customer support replies using a t
 ├── app.py              # FastAPI application with routes
 ├── agents.py           # Agent logic (draft, critique, revise, review)
 ├── requirements.txt    # Python dependencies
-├── .env                # GROQ_API_KEY (not tracked)
-└── test_complaints_verbose.py  # Verbose test showing review iterations
+└── .env                # GROQ_API_KEY (not tracked)
 ```
 
 ## Quick Start
@@ -78,13 +77,6 @@ curl -X POST http://localhost:8000/draft-reply \
     "complaint": "My order arrived broken for the third time",
     "customer_name": "John"
   }'
-```
-
-## Testing
-
-```bash
-# Run verbose test showing each review iteration
-python3 test_complaints_verbose.py
 ```
 
 ## Deployment
